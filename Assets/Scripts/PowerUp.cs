@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Power Up")]
-public class PowerUp : ScriptableObject
+public class WeaponSetting : ScriptableObject
 {
     [Range(1,10)]
     public int ATK;

@@ -10,6 +10,8 @@ abstract public class BaseEnemy : MonoBehaviour
     public float SPD;
     public int SCR;
 
+    public PlayerController playerController;
+
     void Start()
     {
         
@@ -19,7 +21,7 @@ abstract public class BaseEnemy : MonoBehaviour
 
     virtual protected void Move()
     {
-        transform.Translate((PlayerController.Instance.gameObject.transform.position - transform.position).normalized * SPD * Time.deltaTime);
+        transform.Translate((playerController.transform.position - transform.position).normalized * SPD * Time.deltaTime);
     }
 
     //Subtract damage from HP.
@@ -29,6 +31,8 @@ abstract public class BaseEnemy : MonoBehaviour
         if (HP <= 0)
             Die();
         //flash red.
+        
+        Debug.LogFormat("Enemy Health: {0}", HP);
     }
 
     virtual protected void Die()

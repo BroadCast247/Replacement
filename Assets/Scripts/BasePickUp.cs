@@ -6,7 +6,7 @@ public class PickUp : MonoBehaviour
 {
     //List with PowerUp ScriptableObjects, then create prefab?
     //This naming sense is now ass.
-    public PowerUp powerUp;
+    public WeaponSetting powerUp;
     public ShootMechanic weapon;
 
     private void Start()
@@ -23,7 +23,7 @@ public class PickUp : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            weapon.weaponSettings = powerUp;
+            //weapon.weaponSettings = powerUp;
         }
     }
 }

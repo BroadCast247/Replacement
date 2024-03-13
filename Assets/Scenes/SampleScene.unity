@@ -409,6 +409,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &628929462
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 628929463}
+  - component: {fileID: 628929464}
+  m_Layer: 0
+  m_Name: MachineGun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &628929463
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628929462}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2089580597}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &628929464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628929462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef1b41e604e4c964888dff9f31e71a6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponSettings: {fileID: 11400000, guid: b4d2da6d0f837404e883b1ba56ffa130, type: 2}
 --- !u!1 &700459634
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,6 +802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUp: {fileID: 11400000, guid: caad290af34049a41aa179cab9128976, type: 2}
+  weapon: {fileID: 0}
 --- !u!212 &760430463
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1034,6 +1080,7 @@ MonoBehaviour:
   HP: 0
   SPD: 0
   SCR: 0
+  playerController: {fileID: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1675,6 +1722,7 @@ MonoBehaviour:
   HP: 2
   SPD: 4
   SCR: 1
+  playerController: {fileID: 0}
 --- !u!1 &2011398494
 GameObject:
   m_ObjectHideFlags: 0
@@ -1800,7 +1848,8 @@ Transform:
   m_LocalPosition: {x: 0.3, y: -0.1, z: 0.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 628929463}
   m_Father: {fileID: 2121932497}
   m_LocalEulerAnglesHint: {x: 0, y: -90.09, z: 0}
 --- !u!114 &2089580598
@@ -1817,7 +1866,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenPosition: {x: 0, y: 0, z: 0}
   worldPosition: {x: 0, y: 0, z: 0}
-  weaponSettings: {fileID: 11400000, guid: cc6fd83e34e1e834c9f238a17fb1f96f, type: 2}
+  subMachineGunPrefab: {fileID: 0}
+  currWeapon: {fileID: 628929464}
 --- !u!212 &2089580599
 SpriteRenderer:
   m_ObjectHideFlags: 0
